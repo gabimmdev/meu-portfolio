@@ -3,17 +3,17 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 let theme = createTheme({
   palette: {
     primary: {
-      main: '#878f78',
+      main: '#708090',
     },
     secondary: {
       main: '#bdc6b5',
     },
   },
-  typography: {
-    fontFamily: "Apple Color Emoji"
+  typography: {  /*fonte para o conteúdo da tag typography */
+    fontFamily: "Segoe UI, Tahoma, Geneva, Verdana, sans-serif",
 }
 });
 
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme); /* comando para fonte responsiva */
 
 export default theme;
