@@ -6,7 +6,7 @@ import theme from './theme.ts';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}> {/* tema personalizado */}
     <CssBaseline /> {/* Adicionar a CSSBaseline da MUI para garantir um estilo consistente */}
     <App />
     </ThemeProvider>
