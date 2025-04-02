@@ -4,7 +4,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { keyframes } from "@mui/system";
-import LocalCafeIcon from "@mui/icons-material/LocalCafe";
+import Matcha from "../../../../assets/img/matcha-latte.png"
 
 const Hero = () => {
 
@@ -29,14 +29,13 @@ const Hero = () => {
   100% { transform: translateY(0); }
 `;
 
-const TeaIcon = styled(LocalCafeIcon)(({ theme }) => ({
+const TeaIcon = styled("img")({
+  width: "18%",
   position: "absolute",
-  bottom: "-10px",
-  right: "-10px",
-  fontSize: 40,
-  color: theme.palette.secondary.main,
+  bottom: "10%",
+  right: "10%",
   animation: `${floatAnimation} 2s infinite ease-in-out`,
-}));
+});
 
 
     return (
@@ -47,18 +46,16 @@ const TeaIcon = styled(LocalCafeIcon)(({ theme }) => ({
                     {/* xs = responsividade para telas pequenas | md = responsividade para telas médias */}
                     <Grid item xs={12} md={5}> {/* tamanho da tela que ocupa | nesse caso xs = 12 de 12 e md = 4 de 12 */}
                             <Box position="relative">
-                                <Box textAlign="center">
+                                <Box position="absolute" textAlign="center">
                                 <StyledImg src={Avatar} />
-                                </Box>
-                                <Box position="absolute">
-                                <TeaIcon />
+                                <TeaIcon src={Matcha} />
                                 </Box>
                             </Box>
                     </Grid>
                     <Grid item xs={12} md={7}> 
                         {/* primary = tema cor padrão do material UI | vai ser mudado depois. */}
-                        <Typography color="primary.contrastText" textAlign="center" pb={2} fontSize={70}>Gabriela Gomes</Typography>
-                        <Typography color="primary.contrastText" textAlign="center" fontSize={50}>I'm a Front-End Developer</Typography>
+                        <Typography color="primary.contrastText" textAlign="center" pb={2} variant="h1">Gabriela Gomes</Typography>
+                        <Typography color="primary.contrastText" textAlign="center" variant="h2">I'm a Front-End Developer</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center"> {/* xs=12 deixa os botões um embaixo do outro |  md=4 deixa os botões um ao lado do outro */}
                                 <StyledButton>
