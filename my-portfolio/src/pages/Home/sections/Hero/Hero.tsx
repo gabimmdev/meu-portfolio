@@ -3,6 +3,9 @@ import Avatar from "../../../../assets/img/Avatar.jpeg"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
+import { keyframes } from "@mui/system";
+import LocalCafeIcon from "@mui/icons-material/LocalCafe";
+
 const Hero = () => {
 
     const StyledHero = styled("div")(({theme})=>({
@@ -19,6 +22,22 @@ const Hero = () => {
         zIndex: "5",
     }))
 
+    // Animação de flutuação para o ícone de chá
+  const floatAnimation = keyframes`
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+`;
+
+const TeaIcon = styled(LocalCafeIcon)(({ theme }) => ({
+  position: "absolute",
+  bottom: "-10px",
+  right: "-10px",
+  fontSize: 40,
+  color: theme.palette.secondary.main,
+  animation: `${floatAnimation} 2s infinite ease-in-out`,
+}));
+
 
     return (
       <>
@@ -28,8 +47,11 @@ const Hero = () => {
                     {/* xs = responsividade para telas pequenas | md = responsividade para telas médias */}
                     <Grid item xs={12} md={5}> {/* tamanho da tela que ocupa | nesse caso xs = 12 de 12 e md = 4 de 12 */}
                             <Box position="relative">
-                                <Box position="absolute" textAlign="center">
+                                <Box textAlign="center">
                                 <StyledImg src={Avatar} />
+                                </Box>
+                                <Box position="absolute">
+                                <TeaIcon />
                                 </Box>
                             </Box>
                     </Grid>
