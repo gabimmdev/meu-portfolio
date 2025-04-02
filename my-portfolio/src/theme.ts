@@ -10,7 +10,7 @@ let theme = createTheme({
     },
   },
   typography: {  /*fonte para o conteúdo da tag typography */
-    fontFamily: "Andale Mono, monospace",
+    fontFamily: "Bebas Neue",
 }
 });
 
