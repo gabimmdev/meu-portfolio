@@ -5,6 +5,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import Matcha from "../../../../assets/img/matcha-latte.png";
 import CV from "../../../../assets/pdf/curriculoGabriela.pdf"
+import Typewriter from "../../../../components/Typewriter/Typewriter";
 const Hero = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
@@ -71,7 +72,7 @@ const handleEmail = () => {
                         </Grid>
                         <Grid item xs={12} md={7}>
                             <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Gabriela Gomes</Typography>
-                            <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Front End Developer</Typography>
+                            <Typewriter text="I'm a Front End Developer" delay={120} variant="h2" color="primary.contrastText"/>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={() => handleDownload()}>
