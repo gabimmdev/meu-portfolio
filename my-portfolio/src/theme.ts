@@ -10,7 +10,7 @@ let theme = createTheme({
     },
   },
   typography: {  /*fonte para o conteúdo da tag typography */
-    fontFamily: "Bebas Neue",
+    fontFamily: "Segoe UI",
 }
 });
 
