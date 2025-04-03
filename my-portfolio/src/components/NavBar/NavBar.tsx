@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { styled } from '@mui/material';
+import logo from '../../assets/images/logo.png'; 
 
 export const StyledNavLink = styled("a")(() => ({
     textDecoration: "none",
@@ -16,7 +17,7 @@ export const StyledNavLink = styled("a")(() => ({
 export const StyledMobileToolbar = styled(Toolbar)(({ theme }) => ({
     [theme.breakpoints.up('xs')]: {
         display: "flex",
-        justifyContent: "end"
+        justifyContent: "space-between"
     },
     [theme.breakpoints.up('md')]: {
         display: "none",
@@ -29,7 +30,9 @@ export const StyledDesktopToolbar = styled(Toolbar)(({ theme }) => ({
     },
     [theme.breakpoints.up('md')]: {
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%"
     },
 }));
 
@@ -56,9 +59,10 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="absolute">
                 <StyledMobileToolbar>
+                    <img src={logo} alt="Logo" style={{ width:"18%"}} />
                     <IconButton
                         size="large"
-                        aria-label="account of current user"
+                        aria-label="menu"
                         aria-controls="menu-appbar"
                         aria-haspopup="true"
                         onClick={handleMenu}
@@ -88,18 +92,21 @@ export default function Navbar() {
                         </MenuItem>
                     </Menu>
                 </StyledMobileToolbar>
-                <StyledDesktopToolbar variant="regular">
-                    <MenuItem onClick={() => handleSmoothScroll("about")}>
-                        <StyledNavLink>About</StyledNavLink>
-                    </MenuItem>
-                    <MenuItem onClick={() => handleSmoothScroll("skills")}>
-                        <StyledNavLink>Skills</StyledNavLink>
-                    </MenuItem>
-                    <MenuItem onClick={() => handleSmoothScroll("projects")}>
-                        <StyledNavLink>Projects</StyledNavLink>
-                    </MenuItem>
+                <StyledDesktopToolbar>
+                    <img src={logo} alt="Logo" style={{ width: "5%" }} />
+                    <Box sx={{ display: "flex", gap: 2 }}>
+                        <MenuItem onClick={() => handleSmoothScroll("about")}>
+                            <StyledNavLink>About</StyledNavLink>
+                        </MenuItem>
+                        <MenuItem onClick={() => handleSmoothScroll("skills")}>
+                            <StyledNavLink>Skills</StyledNavLink>
+                        </MenuItem>
+                        <MenuItem onClick={() => handleSmoothScroll("projects")}>
+                            <StyledNavLink>Projects</StyledNavLink>
+                        </MenuItem>
+                    </Box>
                 </StyledDesktopToolbar>
             </AppBar>
-        </Box >
+        </Box>
     );
 }
