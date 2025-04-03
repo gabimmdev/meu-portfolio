@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import Avatar from "../../../../assets/img/Avatar.jpeg"
+import Avatar from "../../../../assets/images/Avatar.jpeg"
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
-import Matcha from "../../../../assets/img/matcha-latte.png";
-import CV from "../../../../assets/pdf/curriculoGabriela.pdf"
+import Matcha from "../../../../assets/images/matcha-latte.png";
+import CV from "../../../../assets/pdfs/curriculoGabriela.pdf"
 import Typewriter from "../../../../components/Typewriter/Typewriter";
 const Hero = () => {
 
