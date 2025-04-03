@@ -5,32 +5,31 @@ interface StyledButtonProps {
     children: ReactNode
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({children}) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
 
-  const StyledButton = styled("button")(({ theme }) => ({
-      backgroundColor: "#658d5a",
-      border: `1px solid ${theme.palette.primary.contrastText}`,
-      borderRadius: "3px",
-      padding: "5px 15px",
-      width: "100%",
-      color: theme.palette.primary.contrastText,
-      display: "inline-flex",
-      alignItems: "center",
-      justifyContent: "center",
-      cursor: "pointer",
-      gap: "10px",
-      '&:hover': {
-          backgroundColor: "transparent",
-    },
-  }));
-  
+    const StyledButton = styled("button")(({ theme }) => ({
+        backgroundColor: theme.palette.secondary.light,
+        border: `1px solid ${theme.palette.primary.contrastText}`,
+        borderRadius: "3px",
+        padding: "5px 15px",
+        width: "100%",
+        color: theme.palette.primary.contrastText,
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
+        '&:hover': {
+            backgroundColor: "transparent"
+        }
+    }))
+
     return (
-      <>
-        <StyledButton>
-        {children}
-        </StyledButton>
-      </>
+        <>
+            <StyledButton>
+                {children}
+            </StyledButton>
+        </>
     )
-  }
-  
-  export default StyledButton
+}
+
+export default StyledButton
