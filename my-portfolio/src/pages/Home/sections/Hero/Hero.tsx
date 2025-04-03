@@ -4,7 +4,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import Matcha from "../../../../assets/img/matcha-latte.png";
-
+import CV from "../../../../assets/pdf/curriculoGabriela.pdf"
 const Hero = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
@@ -33,6 +33,28 @@ const Hero = () => {
         bottom: "10%",
         right: "10%",
     });
+const handleDownload = () => {
+    console.log("download")
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = CV
+    link.download = 'curriculoGabriela.pdf'; // Set the download attribute to specify the file name
+    // Append the link to the body
+    document.body.appendChild(link);
+    // Trigger the click event
+    link.click();
+    // Remove the link from the body
+    document.body.removeChild(link);
+};
+
+const handleEmail = () => {
+    const emailAddress = 'contatogabim@outlook.com';
+    const subject = 'Subject';
+    const body = 'Hello! I saw your portfolio...';
+
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink);
+}
 
     return (
         <>
@@ -52,7 +74,7 @@ const Hero = () => {
                             <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Front End Developer</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={()=> console.log("download")}>
+                                    <StyledButton onClick={() => handleDownload()}>
                                         <DownloadIcon />
                                         <Typography>
                                             Download CV
@@ -60,7 +82,7 @@ const Hero = () => {
                                     </StyledButton>
                                 </Grid>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                    <StyledButton onClick={()=> console.log("contact")}>
+                                    <StyledButton onClick={() => handleEmail()}>
                                         <MailOutlineIcon />
                                         <Typography>
                                             Contact me
