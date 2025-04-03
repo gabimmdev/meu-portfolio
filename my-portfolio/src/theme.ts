@@ -10,7 +10,9 @@ let theme = createTheme({
     },
   },
   typography: {  /*fonte para o conteúdo da tag typography */
-    fontFamily: "Segoe UI",
+    fontFamily: [ 
+      '"Segoe UI"',
+  ].join(','),
 }
 });
 
