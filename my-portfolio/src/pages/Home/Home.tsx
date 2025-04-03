@@ -1,7 +1,7 @@
 import NavBar from "../../components/NavBar/NavBar"
 import Hero from "./sections/Hero/Hero"
-import AboutSection from "./sections/About/About"
-import ProjectsSection from "./sections/Projects/Projects"
+import About from "./sections/About/About"
+import Projects from "./sections/Projects/Projects"
 import Footer from "../../components/Footer/Footer"
 
 const Home = () => {
@@ -9,8 +9,8 @@ const Home = () => {
       <>
       <NavBar/>
       <Hero />
-      <AboutSection/>
-      <ProjectsSection/>
+      <About/>
+      <Projects/>
       <Footer/>
       </>
     )
