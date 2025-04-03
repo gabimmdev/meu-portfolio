@@ -4,9 +4,9 @@ import StyledButton from "../StyledButton/StyledButton";
 export interface ProjectCardProps {
     title: string;
     subtitle: string;
-    srcImg: string;
-    description: string
-    technologies: string
+    srcImg: string; 
+    description: string;
+    technologies: string;
     websiteURL: string;
     codeURL: string;
 }
@@ -42,15 +42,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }
     }));
 
+    const imageSrc = srcImg.startsWith("http") ? srcImg : `/images/${srcImg}`;
+
     return (
         <StyledCard>
             <Typography variant="h5">
                 {title}
             </Typography>
-            <Typography >
+            <Typography>
                 {subtitle}
             </Typography>
-            <StyledImg src={srcImg} />
+            <StyledImg src={imageSrc} alt={title} />
             <Typography>
                 {description}
             </Typography>
@@ -66,7 +68,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </Grid>
             </Grid>
         </StyledCard>
-    )
-}
+    );
+};
 
-export default ProjectCard
+export default ProjectCard;
