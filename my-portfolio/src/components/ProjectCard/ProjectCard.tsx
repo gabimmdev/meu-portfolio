@@ -42,7 +42,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }
     }));
 
-    const imageSrc = srcImg.startsWith("/") || srcImg.startsWith("http") ? srcImg : `/images/${srcImg}`;
 
     return (
         <StyledCard>
@@ -52,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography>
                 {subtitle}
             </Typography>
-            <StyledImg src={imageSrc} alt={title} />
+            <StyledImg src={srcImg} alt={title} />
             <Typography>
                 {description}
             </Typography>
