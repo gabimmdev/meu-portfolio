@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         }
     }));
 
-    const imageSrc = srcImg.startsWith("http") ? srcImg : `/images/${srcImg}`;
+    const imageSrc = srcImg.startsWith("/") || srcImg.startsWith("http") ? srcImg : `/images/${srcImg}`;
 
     return (
         <StyledCard>
