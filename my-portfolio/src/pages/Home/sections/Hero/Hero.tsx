@@ -6,7 +6,7 @@ import StyledButton from "../../../../components/StyledButton/StyledButton";
 import Matcha from "../../../../assets/images/matcha-latte.png";
 import CV from "../../../../assets/pdfs/curriculoGabriela.pdf"
 import Typewriter from "../../../../components/Typewriter/Typewriter";
-const Hero = () => {
+const Hero: React.FC = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
         backgroundColor: theme.palette.primary.main,
