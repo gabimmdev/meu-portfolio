@@ -49,11 +49,11 @@ const AboutSection: React.FC = () => {
                 </Grid>
                 <Box pb={1}>
                     <Typography>
-                    Olá! Sou Gabriela, graduanda em Análise e Desenvolvimento de Sistemas pela FIAP, com foco e paixão pelo desenvolvimento front-end.
+                    Olá! Sou Gabriela, graduanda em Análise e Desenvolvimento de Sistemas pela FIAP, com foco e paixão pelo desenvolvimento front-end. <br />
                     Gosto de transformar ideias em interfaces intuitivas e envolventes, criando experiências que realmente fazem a diferença. Tenho experiência 
-                    no desenvolvimento de aplicações web e mobile, trabalhando com tecnologias como React, TypeScript, Next.js, Vite e React Native. Acredito que 
-                    um bom código vai além da técnica: colaboração e comunicação eficaz são essenciais para o sucesso de qualquer equipe. Gosto de contribuir ativamente, 
-                    compartilhando conhecimento e ajudando o time a evoluir. Minha abordagem para resolver problemas é baseada na organização e em processos bem estruturados. 
+                    no desenvolvimento de aplicações web e mobile, trabalhando com tecnologias como React, TypeScript, Next.js, Vite e React Native. <br />  Acredito que 
+                    um bom código vai além da técnica: colaboração e comunicação eficaz são essenciais para o sucesso de qualquer equipe. Gosto  de contribuir ativamente, 
+                    compartilhando conhecimento e ajudando o time a evoluir. <br /> Minha abordagem para resolver problemas é baseada na organização e em processos bem estruturados. 
                     Busco sempre criar um ambiente de trabalho produtivo, transparente e alinhado com os objetivos do projeto.
                     </Typography>
                 </Box>
