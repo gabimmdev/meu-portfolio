@@ -10,11 +10,11 @@ const ProjectsSection: React.FC = () => {
 
     }));
 
-    const projects = [
+    const projects = [ 
         {
             title: "Blue Ocean",
             subtitle: "May 2024 - Feb 2025",
-            srcImg: "my-portfolio/src/assets/images/project-blue.png",
+            srcImg: "/images/project-blue.png",
             description: "O projeto Blue Ocean é um site informativo desenvolvido para conscientizar sobre os impactos da poluição marinha e incentivar ações para a preservação dos oceanos. Ele utiliza HTML, CSS e JavaScript para oferecer uma experiência visual e interativa. O design do site é aprimorado com imagens temáticas.",
             technologies: "Technologies: JavaScript, HTML, CSS",
             websiteURL: "https://blueoceann.netlify.app/",
