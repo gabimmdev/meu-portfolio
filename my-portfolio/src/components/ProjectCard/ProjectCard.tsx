@@ -4,7 +4,6 @@ import StyledButton from "../StyledButton/StyledButton";
 export interface ProjectCardProps {
     title: string;
     subtitle: string;
-    srcImg: string; 
     description: string;
     technologies: string;
     websiteURL: string;
@@ -14,22 +13,11 @@ export interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
     title,
     subtitle,
-    srcImg,
     description,
     technologies,
     websiteURL,
     codeURL
 }) => {
-
-    const StyledImg = styled("img")(({ theme }) => ({
-        width: "100%",
-        objectFit: "contain",
-        height: "80vw",
-        padding: "10px 0",
-        [theme.breakpoints.up('md')]: {
-            height: "45vh",
-        },
-    }));
 
     const StyledCard = styled("div")(({ theme }) => ({
         borderRadius: "3px",
@@ -51,7 +39,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography>
                 {subtitle}
             </Typography>
-            <StyledImg src={srcImg} alt={title} />
             <Typography>
                 {description}
             </Typography>
