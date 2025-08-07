@@ -4,7 +4,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import Matcha from "../../../../assets/images/matcha-latte.png";
-import CV from "../../../../assets/pdfs/curriculoGabriela.pdf"
+import CV from "../../../../assets/pdfs/curriculoGabriela.pdf";
 import Typewriter from "../../../../components/Typewriter/Typewriter";
 const Hero: React.FC = () => {
 
